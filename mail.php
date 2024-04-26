@@ -13,8 +13,7 @@ $message = "\Name: $name \nEmail: $mail\Message: $text"; //Создаем шаб
 $pagetitle = "Новая заявка с сайта \"$sitename\""; //Задаем тему письма
 mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
 if($message){
-	echo "Thank you! Your submission has been received!"
-    // header("Location: https://www.sitename.com/thank-you");  //В случае успешной отправки перенаправляем пользователя на заранее созданную страницу с благодарностью
+    header("https://trendtales.webflow.io/contact/contact");  //В случае успешной отправки перенаправляем пользователя на заранее созданную страницу с благодарностью
   }else{  //В случае ошибки выводим такое сообщение:
     echo "Oops! Something went wrong while submitting the form";
   }
